@@ -1,0 +1,69 @@
+/*
+ * Sets the stlye of the image wrapper <div> to be centered
+ */
+
+#threesixty {
+  position:absolute;
+  /* This one fixes the IE positioning bug */
+  overflow:hidden;
+  top:50%;
+  left:50%;
+  width:960px;
+  height:540px;
+  margin-left:-480px;
+  margin-top:-270px;
+
+}
+
+/*
+ * Defines the criteria for the max. 1024px wide tablets
+ */
+@media screen and(max-device-width: 1024px) and (orientation:portrait) {
+      #threesixty {
+        width:720x;
+        height:450px;
+        margin-left:-360px;
+        margin-top:-225px;
+      }
+}
+
+/*
+ * Defines the criteria for the max  480px wide mobiles'
+ */
+@media screen and(max-device-width: 480px) and (orientation:landscape),
+                             screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+      #threesixty {
+        width:360px;
+        height:225px;
+        margin-left:-180px;
+        margin-top:-113px;
+      }
+}
+
+/*
+ * Defines the criteria for the max.
+ */
+
+@media screen and(max-device-width: 480px) and (orientation:landscape),
+                             screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+      #threesixty {
+        width:320px;
+        height:200px;
+        margin-left:-160px;
+        margin-top:-100px;
+      }
+}
+
+/*
+ * Makes int image slider invisible by default
+ */
+
+#threesixty_images {
+  display:none;
+}
+
+/*
+ * Set every image in the slider to be absolute and positioned dynamically sized.
+ */
+
+
