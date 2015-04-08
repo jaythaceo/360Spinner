@@ -66,4 +66,12 @@
  * Set every image in the slider to be absolute and positioned dynamically sized.
  */
 
+#threesixty img {
+  position:absolute;
+  /* This fixes the IE positioning bug */
+  top:0;
+  width:100%;
+  height:auto;
+}
+
 
