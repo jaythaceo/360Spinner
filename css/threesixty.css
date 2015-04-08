@@ -74,4 +74,41 @@
   height:auto;
 }
 
+/*
+ * Sets the style of the visible "previous" frame of the image slider animation.
+ */
 
+.previous-image {
+  visibility:hidden;
+  width:0;
+}
+
+/*
+ * Sets the demensions of the Canvasloader placeholder
+ */
+
+#spinner {
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:90px;
+  height:90px;
+  margin-left:-45px;
+  margin-top:-50px;
+  display:none;
+}
+
+/*
+ * Sets the style percentage
+ */
+
+#spinner span {
+  position:absolute;
+  top:50%;
+  width:100%;
+  color:#333;
+  font:0.8em Arial, Verdana, sans;
+  text-align:center;
+  line-height:0.6em;
+  margin-top:-0.3em;
+}
