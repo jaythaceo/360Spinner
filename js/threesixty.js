@@ -40,6 +40,6 @@ $(document).ready(function(){
     fakePointerTimer = 0;
 
   function addSpinner (){
-    
+
   };
 }):
