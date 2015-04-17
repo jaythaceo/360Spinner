@@ -63,7 +63,20 @@ $(document).ready(function(){
     var li document.createElement("li");
     // Generates image file
     var imageName = "img/threesixty_" + (loadedImages + 1) + ".jpg";
+    /*
+        Creates a new <img> and sets its source attributes to point tot the file name we generated.
+        It also hides the imag by applying the previous-image CSS class to it.
+        The image is then loaded ti <li>
+    */
+    var image = S("img").attr('src', imageName).addClass("previous-image").appendTo(li);
+    frames.push(image);
+    $images.append(li);
+    $(image).load(function() {
+      imageLoaded();
+    });
   };
+
+
 
 }):
 
