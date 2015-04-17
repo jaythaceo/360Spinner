@@ -76,7 +76,34 @@ $(document).ready(function(){
     });
   };
 
+  /**
+  * It handles the image "load" events
+  * Each time this function is called it checks if all the images have been loaded or it has to load the next one.
+  * Every time a new image is succesfully loaded, we set the perctage value of the preloader
+  */
+  function imageLoaded() {
+    // Increments the value of the "loadedImages" variable
+    loadedImages++;
+    // Updates the preloader perctange text
+    $("#spinner span").text(Math.floor(loadedImages/ totalFrames * 100) + "%");
+    if (loadedImages == totalFrames) {
+      frames[0].removeClass("previous-image").addClass("current-image");
+      $("spinner").fadeOut("slow", function() {
+        // body...
+        spinner.hide();
+        showThreesixty();
 
+      });
+
+    } else {
+
+      loadImage();
+
+    }
+
+  };
+
+  
 
 }):
 
