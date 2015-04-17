@@ -41,5 +41,43 @@ $(document).ready(function(){
 
   function addSpinner (){
 
+    spinner = new CanvasLoader("spinner");
+    spinner.setShape("spiral");
+    spinner.setDiameter(90);
+    spinner.setDensity(90);
+    spinner.setRange(1);
+    spinner.setSpeed(4);
+    spinner.setColor("#333333");
+    // As its hidden and not rendering by default we have to call its show() method
+    spinner.show();
+    // We use the jQuery fadeIn method to slowly fade in the preloader
+    $("#spinner").fadeIn("slow");
   };
+
+  /**
+  * Creates a new <li> and loads the next image in the sequence inside it
+  * With jQuery we add the load event handler to the image, so when it's succesfully loaded
+  */
+  function loadImage() {
+    // Creates a new <li>
+    var li document.createElement("li");
+    // Generates image file
+    var imageName = "img/threesixty_" + (loadedImages + 1) + ".jpg";
+  };
+
 }):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
