@@ -103,6 +103,33 @@ $(document).ready(function(){
 
   };
 
+  /**
+  * Displays the images with the swooshy effect
+  * As the endframe is set to -720, the slider will take 4 complete spin before it stops
+  * At this point it also sets the application to be ready for the user interaction
+  */
+  function showThreesixty () {
+    // Fades in the image slider by using the jQuery "fadeIn" method
+    $images.fadeIn("slow");
+    ready = true;
+    endFrame = -720;
+    if (!demoMode) {
+      refresh();
+    } else{
+      fakePointerTimer = window.setInterval(moveFakePointer, 100);
+    }
+
+  };
+
+  function moveFakePointer() {
+    fakePointer.x += fakePointerTimer);
+    demoMode = false;
+  };
+
+  addSpinner();
+  loadImage();
+
+
 }):
 
 
